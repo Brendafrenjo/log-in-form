@@ -43,12 +43,12 @@
           type="text"
           id="userName"
           placeholder="Type username here..."
-          class="form-control"
+          class="form-control username"
         />
         <input type="password" id="passwordInput" class="form-control mt-2" />
         <input
           type="submit"
-          id="userName"
+          id="log-in-info"
           placeholder="Log In"
           class="form-control btn btn-warning mt-2 mb-1"
         />
@@ -57,6 +57,11 @@
       </form>
     </div>
     <script>
+      function handleChange(e) {
+        e.preventDefault();
+        console.log("Username:", userName.value);
+      }
+
       function toggleVisibilityChange() {
         if (toggleVisibility.checked) {
           passwordInput = "text";
@@ -67,7 +72,9 @@
 
       const passwordInput = document.getElementById("passwordInput");
       const toggleVisibility = document.getElementById("toggleVisibility");
+      const userName = document.getElementById("userName");
 
+      userName.addEventListener("change", handleChange);
       toggleVisibility.addEventListener("change", toggleVisibilityChange);
     </script>
   </body>
