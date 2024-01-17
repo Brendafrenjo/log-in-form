@@ -45,7 +45,12 @@
           placeholder="Type username here..."
           class="form-control username"
         />
-        <input type="password" id="passwordInput" class="form-control mt-2" />
+        <input
+          type="password"
+          id="passwordInput"
+          class="form-control mt-2"
+          value="HggFd343"
+        />
         <input
           type="submit"
           id="log-in-info"
@@ -64,9 +69,9 @@
 
       function toggleVisibilityChange() {
         if (toggleVisibility.checked) {
-          passwordInput = "text";
+          passwordInput.type = "text";
         } else {
-          passwordInput = "password";
+          passwordInput.type = "password";
         }
       }
 
